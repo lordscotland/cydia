@@ -7,4 +7,5 @@
   echo MD5sum: $(md5sum "$fn" | cut -d" " -f1)
   echo
 done } | tee Packages
+gzip -fk Packages
 bzip2 -f Packages
